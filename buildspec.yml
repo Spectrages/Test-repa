@@ -7,7 +7,7 @@ env:
 phases:
   install:
     commands:
-      - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --storage-driver=overlay2 &  # or try "aufs" or "devicemapper"
+      - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock & # Removed storage-driver
       - sleep 30
       - docker info
   build:
