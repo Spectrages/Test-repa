@@ -12,10 +12,10 @@ phases:
       - docker info
   build:
     commands:
-      - echo "Listing the contents of LANDING_PATH:"
-      - ls -al $LANDING_PATH
+      - echo "Listing the contents of CODEBUILD_SRC_DIR:"
+      - ls -al $CODEBUILD_SRC_DIR
       - echo "Building the Docker image..."
-      - cd $LANDING_PATH
+      - cd template_6
       - docker build -t 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:latest .
   post_build:
     commands:
