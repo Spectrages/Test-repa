@@ -1,0 +1,134 @@
+.text {
+  font-family: inherit;
+  cursor: default;
+}
+
+.fontStyleItalic {
+  font-style: italic;
+}
+
+.fontStyleNormal {
+  font-style: normal;
+}
+
+.fontWeightNormal {
+  font-weight: 400;
+}
+
+.fontWeightMedium {
+  font-weight: 500;
+}
+
+.fontWeightBold {
+  font-weight: 700;
+}
+
+.fontSize_xxs {
+  font-size: 8px;
+  line-height: 11px;
+}
+
+.fontSize_xs {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.fontSize_sm {
+  font-size: 25px;
+  line-height: normal;
+}
+
+.fontSize_base {
+  font-size: 30px;
+  line-height: normal;
+}
+
+.fontSize_lg {
+  font-size: 35px;
+  line-height: normal;
+}
+
+.fontSize_xl {
+  font-size: 40px;
+  line-height: normal;
+}
+
+.fontSize_xxl {
+  font-size: 45px;
+  line-height: normal;
+}
+
+.fontSize_xxxl {
+  font-size: 50px;
+  line-height: normal;
+}
+
+.textColor_white {
+  color: #fff;
+}
+
+.textColor_black {
+  color: #000;
+}
+
+.textColor_gray_dark {
+  color: #333333;
+}
+
+.textColor_gray_light {
+  color: #383f43;
+}
+
+.textColor_blue_dark {
+  color: #2e3940;
+}
+
+.textColor_pink_dark {
+  color: #a0627b;
+}
+
+.textColor_pink_light {
+  color: #b79ba6;
+}
+
+.textColor_green {
+  color: #57b88b;
+}
+
+.textColor_orange {
+  color: #F4AA00;
+}
+
+.textAlign_left {
+  text-align: left;
+}
+
+.textAlign_center {
+  text-align: center;
+}
+
+.textAlign_right {
+  text-align: right;
+}
+
+.textTransform_uppercase {
+  text-transform: uppercase;
+}
+
+.textTransform_lowercase {
+  text-transform: lowercase;
+}
+
+.textTransform_capitalize {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.textTransform_normal {
+  text-transform: none;
+}
+
+.disabled {
+  color: #d3b8c2;
+}

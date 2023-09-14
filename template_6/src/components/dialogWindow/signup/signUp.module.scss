@@ -1,0 +1,11 @@
+.sign_up {
+    text-align: center;
+    padding: 125px 121px 119px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .sign_up {
+        padding: 35px 35px 35px;
+    }
+}

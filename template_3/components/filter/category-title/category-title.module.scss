@@ -1,0 +1,40 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.category_title {
+  background: $light-xl;
+  border-radius: 26px;
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1735px) {
+  .category_title {
+    @include customFont(25px, 35.57px, 500, $dark-text-color);
+  }
+}
+
+@media (max-width: 1200px) {
+  .category_title {
+    @include customFont(20px, 30.08px, 500, $dark-text-color);
+  }
+}
+
+@media (max-width: 1000px) {
+  .category_title {
+    @include customFont(15px, 35.08px, 500, $dark-text-color);
+    padding-top: 5px;
+    padding-bottom: 6px;
+  }
+}
+
+@media (max-width: 780px) {
+  .category_title {
+    @include customFont(7px, 9.11px, 500, $dark-text-color);
+    border-radius: 4px;
+  }
+}

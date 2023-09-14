@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.introduction{
+  background: $primary-color;
+  position: relative;
+  z-index: 1;
+  .container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding: 450px 30px 170px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 60px;
+  }
+  &__title{
+    margin: auto;
+    @include customFont(45px, 50px, 600, $light-xl);
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .introduction{
+    .container{
+      padding: 75px 15px;
+      row-gap: 20px;
+    }
+    &__title{
+      font-size: 12px;
+      line-height: 14.3px;
+    }
+    &__button{
+      &_text{
+        font-size: 8px;
+      }
+    }
+  }
+}

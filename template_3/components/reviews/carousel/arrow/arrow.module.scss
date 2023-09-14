@@ -1,0 +1,117 @@
+.arrow {
+  width: 45.45px;
+  height: 62.49px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  &__left {
+    background: url('/icons/primary-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: translateY(-50%) rotate(180deg);
+    left: -67.55px;
+  }
+
+  &__right {
+    background: url('/icons/primary-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    right: -67.55px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .arrow {
+    width: 25.45px;
+    height: 32.49px;
+
+    &__left {
+      left: -47.55px;
+    }
+
+    &__right {
+      right: -47.55px;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .arrow {
+    width: 8px;
+    height: 11px;
+
+    &__left {
+      left: -14px;
+    }
+
+    &__right {
+      right: -14px;
+    }
+  }
+}
+
+// .arrow {
+//   width: 45.45px;
+//   height: 62.49px;
+//   border: none;
+//   outline: none;
+//   cursor: pointer;
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   z-index: 2;
+
+//   &__left {
+//     background: url('/icons/primary-arrow.svg');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     transform: translateY(-50%) rotate(180deg);
+//     left: -57.55px;
+//   }
+
+//   &__right {
+//     background: url('/icons/primary-arrow.svg');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     right: -57.55px;
+//   }
+// }
+
+// @media (max-width: 1920px) {
+//   .arrow {
+//     width: 25.45px;
+//     height: 32.49px;
+
+//     &__left {
+//       left: -47.55px;
+//     }
+
+//     &__right {
+//       right: -47.55px;
+//     }
+//   }
+// }
+
+// @media (max-width: 780px) {
+//   .arrow {
+//     width: 8px;
+//     height: 11px;
+
+//     &__left {
+//       left: -14px;
+//     }
+
+//     &__right {
+//       right: -14px;
+//     }
+//   }
+// }

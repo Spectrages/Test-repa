@@ -1,0 +1,76 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.cleaning_text_card {
+  background: $dark-l;
+  border-radius: 19px;
+  box-sizing: border-box;
+  .cleaning_text_card__title {
+    @include customFont(38.43px, 50.04px, 700, $light-xl);
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    @media (max-width: 1600px) {
+      @include customFont(28.43px, 40.04px, 700, $light-xl);
+    }
+  }
+
+  .cleaning_text_card__description {
+    list-style-type: none;
+    padding: 0;
+    li{
+      @include customFont(25px, 27.5px, 400, $light-xl);
+      @media (max-width: 1600px) {
+        @include customFont(20px, 22.5px, 400, $light-xl);
+      }
+    }
+    margin: auto;
+  }
+
+  &:first-of-type {
+    padding: 28.83px 53.23px 83.78px 54.77px;
+    display: grid;
+    grid-template-rows: auto auto;
+    .cleaning_text_card__title {
+      @include customFont(38.43px, 50.04px, 700, $light-xl);
+      margin: auto;
+      text-align: center;
+      text-transform: uppercase;
+      @media (max-width: 1600px) {
+        @include customFont(28.43px, 40.04px, 700, $light-xl);
+      }
+    }
+    .cleaning_text_card__description {
+      max-width: 275px;
+      margin-top: 38.39px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    padding: 28.83px 26px 56px 26px;
+    .cleaning_text_card__description {
+      max-width: 379px;
+      margin-top: 38.17px;
+    }
+  }
+
+  &:nth-of-type(3) {
+    padding: 28.83px 44px 54px 45px;
+    .cleaning_text_card__title {
+      max-width: 298px;
+      text-align: left;
+    }
+    .cleaning_text_card__description {
+      max-width: 341px;
+      margin-top: 18.17px;
+    }
+  }
+
+  &:last-of-type {
+    padding: 28.83px 29px 56px 29px;
+    .cleaning_text_card__description {
+      max-width: 373px;
+      margin-top: 38.17px;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.benefits{
+  background: transparent;
+  .container{
+    max-width: 1920px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 50px 104px 61px 103px;
+    @media (max-width: 1200px) {
+      display: grid;
+      grid-template-areas:
+        "item1"
+        "item2"
+        "item3"
+      ;
+    }
+    @media (max-width: 780px) {
+      padding: 19px 26.5px 26px;
+    }
+  }
+  &__title{
+    margin: 0;
+    @media (max-width: 1735px) {
+      @include customFont(30px, 42.08px, 700, $dark-text-color);
+    }
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+  &__list{
+    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    margin-top: 160px;
+    @media (max-width: 1700px) {
+      column-gap: 50px;
+    }
+    @media (max-width: 1305px) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, auto);
+      row-gap: 25px;
+      margin-top: 50px;
+    }
+    @media (max-width: 1200px) {
+      grid-area: item2;
+    }
+    @media (max-width: 780px) {
+      margin-top: 33px;
+      row-gap: 3px;
+    }
+  }
+  &__description{
+    max-width: 975px;
+    margin: auto;
+    margin-top: 89px;
+    text-align: center;
+    @media (max-width: 1735px) {
+      @include customFont(30px, 42.08px, 500, $dark-text-color);
+    }
+    @media (max-width: 1600px) {
+      margin-top: 59px;
+    }
+    @media (max-width: 1200px) {
+      grid-area: item1;
+      margin-top: 0;
+      @include customFont(20px, 32.08px, 500, $dark-text-color);
+    }
+    @media (max-width: 1000px) {
+      @include customFont(15px, 27.08px, 500, $dark-text-color);
+    }
+    @media (max-width: 780px) {
+      max-width: 213px;
+      @include customFont(8px, 10.42px, 500, $dark-text-color);
+    }
+  }
+  &__underline{
+    display: none;
+    @media (max-width: 1200px) {
+      display: block;
+      grid-area: item3;
+      margin-top: 80px;
+    }
+    @media (max-width: 780px) {
+      margin-top: 35px;
+    }
+  }
+}

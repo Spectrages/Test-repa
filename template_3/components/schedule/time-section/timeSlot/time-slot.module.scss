@@ -1,0 +1,140 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins.scss';
+
+.time_section {
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 64px;
+    background: $dark-l;
+    border-radius: 30px;
+    transition: background .2s;
+    cursor: pointer;
+
+    &:hover {
+      background: $primary-color;
+    }
+
+    @media (max-width: 1735px) {
+      width: 140px;
+    }
+
+    @media (max-width: 1120px) {
+      width: 100px;
+    }
+
+    @media (max-width: 825px) {
+      width: 60px;
+      height: 40px;
+    }
+
+    @media (max-width: 780px) {
+      width: 37px;
+      height: 13.05px;
+      border-radius: 6px;
+      padding: 1px 2px;
+    }
+  }
+
+  &__time_container {
+    position: relative;
+  }
+
+  &__hour {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__minute {
+    position: absolute;
+    top: -5px;
+    right: -15px;
+    border-bottom: 2px solid $light-xl;
+    cursor: pointer;
+  }
+
+  &__hyphen {
+    margin-left: 13px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1735px) {
+  .time_section {
+    &__hour {
+      @include customFont(20px, 32.08px, 700, $light-xl);
+    }
+
+    &__minute {
+      border-bottom: 1px solid $light-xl;
+      top: -12px
+    }
+
+    &__hyphen {
+      @include customFont(20px, 32.08px, 700, $light-xl);
+    }
+  }
+}
+
+@media (max-width: 1120px) {
+  .time_section {
+    &__hour {
+      @include customFont(15px, 27.08px, 700, $light-xl);
+    }
+
+    &__minute {
+      font-size: 6px;
+      right: -10px;
+      top: -8px
+    }
+
+    &__hyphen {
+      @include customFont(15px, 27.08px, 700, $light-xl);
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  .time_section {
+    &__hour {
+      @include customFont(10px, 22.08px, 700, $light-xl);
+    }
+
+    &__minute {
+      top: -2px;
+      font-size: 4px;
+      right: -7px;
+      margin: 0;
+      height: 11px
+    }
+
+    &__hyphen {
+      @include customFont(10px, 22.08px, 700, $light-xl);
+      margin-left: 7px;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .time_section {
+    &__hour {
+      @include customFont(9.16px, 10.62px, 500, $light-xl);
+    }
+
+    &__minute {
+      top: -6px;
+      font-size: 3px;
+      right: -4px;
+      margin: 0;
+      height: 9px
+    }
+
+    &__hyphen {
+      @include customFont(9.16px, 10.62px, 500, $light-xl);
+      margin-left: 1px;
+    }
+  }
+}

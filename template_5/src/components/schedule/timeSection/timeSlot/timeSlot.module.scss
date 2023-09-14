@@ -1,0 +1,51 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .time_section {
+    &__label {
+      max-width: 140px;
+    }
+  }
+}
+
+.time_section {
+  &__label {
+    background: transparent;
+    box-sizing: border-box;
+    transition: all .2s;
+    min-width: 140px;
+    padding: 5px 0;
+    margin: auto;
+    opacity: .4;
+    .title{
+      margin: auto;
+    }
+    cursor: pointer;
+    &:hover {
+      background: $secondary-color;
+      opacity: 1;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .time_section {
+    &__label {
+      min-width: 41px;
+      padding: 2px 0;
+      .title{
+        margin: auto;
+        font-size: 8px;
+      }
+    }
+  }
+  :global(:root[lang="he"]) {
+    :local .time_section {
+      &__label {
+        max-width: 41px;
+      }
+    }
+  }
+}

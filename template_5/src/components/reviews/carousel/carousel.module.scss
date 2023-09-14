@@ -1,0 +1,113 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+
+:global(:root[lang="he"]) {
+  :local .card {
+    &:nth-of-type(1) {
+      order: 3;
+    }
+    &:nth-of-type(2) {
+      order: 2;
+    }
+    &:nth-of-type(3) {
+      order: 1;
+    }
+  }
+  .carousel{
+    &__left_arrow{
+      order: 3;
+    }
+    &__right_arrow{
+      order: 1;
+    }
+  }
+  .card_container{
+    order: 2;
+  }
+}
+
+.carousel{
+  position: relative;
+  margin-bottom: 88.15px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+  padding: 86px 15px;
+  background: $secondary-color;
+  &__left_arrow{
+    transform: rotate(180deg);
+  }
+  &__view_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  position: relative;
+  column-gap: 75px;
+}
+
+.dotContainer{
+  display: flex;
+  column-gap: 30px;
+  position: absolute;
+  bottom: 30px;
+}
+
+.dot{
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.active{
+  background: rgba(0, 0, 0, 0.296);
+}
+
+.swipe{
+  animation: carousel 1.5s;
+}
+
+@keyframes carousel{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 1024px) {
+  .carousel{
+    column-gap: 25px;
+  }
+  .card_container{
+    position: relative;
+    row-gap: 20px;
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel{
+    padding: 38px 15px;
+    column-gap: 40px;
+  }
+  .dotContainer{
+    display: flex;
+    column-gap: 10px;
+    bottom: 10px;
+  }
+  
+  .dot{
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+  }
+}

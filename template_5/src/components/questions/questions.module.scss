@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.questions {
+  margin-bottom: 275px;
+  .container {
+    max-width: 1635px;
+    margin: auto;
+    padding: 0 15px;
+
+  }
+
+  &__title {
+    margin-bottom: 159px;
+  }
+}
+
+@media (max-width: 780px) {
+  .questions {
+    margin-bottom: 90px;
+    &__title {
+      font-size: 15px;
+      margin-bottom: 29px;
+    }
+  }
+}

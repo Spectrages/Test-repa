@@ -1,0 +1,46 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.questions__item {
+  background: $primary-color;
+  padding: 40px 30px;
+  cursor: pointer;
+  transition: height 0.3s ease;
+}
+
+.questions__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.questions__title {
+  max-width: 600px;
+}
+
+.questions__content{
+  font-family: '__Fredoka_d35ece', '__Fredoka_Fallback_d35ece';
+  margin-top: 30px;
+}
+
+.expanded{
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .questions__item {
+    padding: 13px 15px;
+  }
+  
+  .questions__title {
+    font-size: 11px;
+  }
+
+  .questions__state {
+    font-size: 11px;
+  }
+  
+  .questions__content{
+    margin-top: 10px;
+    font-size: 9px;
+  }
+}

@@ -1,0 +1,122 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .container {
+      .nav {
+        ul{
+          flex-direction: row-reverse;
+        }
+      }
+      .switch{
+        left: 0;
+      }
+  }
+}
+
+.header {
+  min-height: 61px;
+  margin-top: 73px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  padding: 0 15px;
+  box-sizing: border-box;
+
+  &__user_icon{
+    display: block;
+    border: none;
+    outline: none;
+    width: 48px;
+    cursor: pointer;
+    height: 48px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent;
+    padding: 0;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .switch{
+    left: 0;
+  }
+
+  .container {
+    max-width: 1720px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    
+    align-items: center;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  max-width: 793px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    column-gap: 80px;
+    margin: 0 46px;
+    padding: 0;
+
+    @media (max-width: 1120px) {
+      column-gap: 30px;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    text-decoration: none;
+    @include customFont(23px, 26px, 600, $light-xl);
+
+    @media (max-width: 1120px) {
+      @include customFont(20px, 23px, 600, $light-xl);
+    }
+
+    @media (max-width: 1000px) {
+      @include customFont(15px, 18px, 600, $light-xl);
+    }
+  }
+  &__border{
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: $light-xl;
+    margin-top: 22px;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-top: 16px;
+    padding: 0 18px;
+    &__user_icon{
+      display: none;
+    }
+  }
+}

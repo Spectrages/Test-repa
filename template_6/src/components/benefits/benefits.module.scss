@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.benefits{
+  background: transparent;
+  background: $secondary-color;
+  .container{
+    margin: auto;
+    box-sizing: border-box;
+    padding: 114px 30px 320px;
+  }
+  &__title{
+    margin-bottom: 108px;
+  }
+  &__list{
+    max-width: 1285px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    row-gap: 90px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits{
+    .container{
+      padding: 33px 30px 45px;
+    }
+    &__title{
+      margin-bottom: 20px;
+      font-size: 9px;
+    }
+    &__list{
+      row-gap: 10px;
+      margin: 0 auto;
+    }
+  }
+}

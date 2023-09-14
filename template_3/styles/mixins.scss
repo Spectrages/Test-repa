@@ -1,0 +1,6 @@
+@mixin customFont($fontSize, $line-height, $fontWeight, $fontColor) {
+  font-size: $fontSize;
+  line-height: $line-height;
+  font-weight: $fontWeight;
+  color: $fontColor;
+}

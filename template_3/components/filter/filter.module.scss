@@ -1,0 +1,93 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.filter {
+  margin-top: 14px;
+
+  .container {
+    max-width: 1672px;
+    margin: auto;
+    margin-top: 32px;
+    margin-bottom: 76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+
+    @media (max-width: 1000px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 780px) {
+      margin: 24.53px 0 17px;
+      padding: 0 25px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0;
+    @media (max-width: 1735px) {
+      @include customFont(30px, 42.08px, 700, $dark-text-color);
+    }
+    @media (max-width: 1000px) {
+      @include customFont(25px, 37.1px, 700, $dark-text-color);
+    }
+    @media (max-width: 780px) {
+      @include customFont(12px, 15.62px, 700, $dark-text-color);
+    }
+  }
+
+  &__main_section {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 110.21px;
+    margin-top: 62px;
+    margin-bottom: 76px;
+
+    @media (max-width: 1400px) {
+      column-gap: 70.21px;
+    }
+
+    @media (max-width: 825px) {
+      margin-top: 30px;
+    }
+
+    @media (max-width: 780px) {
+      margin-top: 7.25px;
+      margin-bottom: 17.5px;
+      column-gap: 22.5px;
+    }
+  }
+
+  &__human_cards {
+    position: relative;
+
+    @media (max-width: 825px) {
+      max-height: 277.6px;
+    }
+  }
+
+  &__human_card{
+    display: none;
+  }
+
+  &__categories {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 52px;
+
+    @media (max-width: 1400px) {
+      column-gap: 25px;
+    }
+
+    @media (max-width: 780px) {
+      column-gap: 16px;
+    }
+  }
+
+  &__primary-button {
+    margin-bottom: 76px;
+  }
+}

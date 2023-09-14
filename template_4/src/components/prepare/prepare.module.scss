@@ -1,0 +1,67 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .prepare{
+    &__text{
+      text-align: right;
+    }
+  }
+}
+
+.prepare{
+  padding: 107px 30px 222px;
+  .container{
+    max-width: 1317px;
+    padding: 58px 103px 78px;
+    box-sizing: border-box;
+    margin: auto;
+    border: 3px solid $primary-green;
+    border-radius: 50px;
+    position: relative;
+  }
+  &__text_section{
+    display: grid;
+    row-gap: 50px;
+    margin-top: 95px;
+  }
+  &__decorate_section{
+    width: 95%;
+    height: 110%;
+    position: absolute;
+    background: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid $primary-green;
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prepare{
+    padding: 50px 30px;
+    .container{
+      max-width: 340px;
+      padding: 13px 27px 21px;
+      border: 0.77px solid $primary-green;
+      border-radius: 13px;
+    }
+    &__title{
+      font-size: 12px;
+    }
+    &__text_section{
+      row-gap: 13px;
+      margin-top: 20px;
+      max-width: 287px;
+      margin: 20px auto 0;
+    }
+    &__decorate_section{
+      border: 0.77px solid $primary-green;
+      border-radius: 13px;
+    }
+    &__text{
+      font-size: 8px;
+    }
+  }
+}

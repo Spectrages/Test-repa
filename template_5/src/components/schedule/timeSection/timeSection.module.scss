@@ -1,0 +1,156 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .time_section {
+    .start_hour_nine{
+      right: -5%;
+    }
+  
+    .start_hour_ten{
+      right: -5%;
+    }
+
+    .start_hour_eleven{
+      right: 16%;
+    }
+  
+    .start_hour_twelve{
+      right: 16%;
+    }
+  
+    .start_hour_thirteen{
+      right: 37%;
+    }
+  
+    .start_hour_fourteen{
+      right: 37%;
+    }
+  
+    .start_hour_fifteen{
+      right: 57%;
+    }
+  
+    .start_hour_sixteen{
+      right: 57%;
+    }
+  }
+}
+
+.time_section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 69px;
+
+  &__time_line {
+    width: 100%;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+  }
+
+  .MON{
+    top: 0px;
+  }
+
+  .TUE{
+    top: 30px;
+  }
+
+  .WED{
+    top: 60px;
+  }
+
+  .THU{
+    top: 85px;
+  }
+
+  .FRI{
+    top: 115px;
+  }
+
+  .start_hour_nine{
+    left: 24%;
+  }
+
+  .start_hour_ten{
+    left: 24%;
+  }
+
+  .start_hour_eleven{
+    left: 35%;
+  }
+
+  .start_hour_twelve{
+    left: 35%;
+  }
+
+  .start_hour_thirteen{
+    left: 46%;
+  }
+
+  .start_hour_fourteen{
+    left: 46%;
+  }
+
+  .start_hour_fifteen{
+    left: 57%;
+  }
+
+  .start_hour_sixteen{
+    left: 57%;
+  }
+
+  input {
+    display: none;
+
+    &:checked {
+      &+label {
+        background: $secondary-color;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .time_section {
+    margin-bottom: 20px;
+    row-gap: 30px;
+    &__time_line {
+      min-height: 13px;
+    }
+
+    &__time{
+      font-size: 8px;
+    }
+  
+    .MON{
+      top: 0px;
+    }
+  
+    .TUE{
+      top: 21px;
+    }
+  
+    .WED{
+      top: 42px;
+    }
+  
+    .THU{
+      top: 64px;
+    }
+  
+    .FRI{
+      top: 86px;
+    }
+  }
+  
+}

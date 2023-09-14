@@ -1,0 +1,109 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .introduction {
+    
+    &__left_block{
+      &_description{
+        text-align: right;
+      }
+      &_text{
+        text-align: right;
+      }
+    }
+    &__decoration_block{
+      transform: translateX(-233%);
+    }
+  }
+}
+
+.introduction{
+  background: $primary-color;
+  position: relative;
+  z-index: 1;
+  .container{
+    max-width: 1920px;
+    margin: auto;
+    padding: 191px 135px 190px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 60px;
+  }
+  &__left_block{
+    position: relative;
+    z-index: 3;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    max-width: 737px;
+    row-gap: 70px;
+    display: flex;
+    flex-direction: column;
+    &_description{
+      font-family: '__Fredoka_d35ece', '__Fredoka_Fallback_d35ece';
+    }
+    &_text{
+      font-family: '__Fredoka_d35ece', '__Fredoka_Fallback_d35ece';
+    }
+  }
+  &__title{
+    align-self: flex-start;
+    margin: 0;
+    @include customFont(45px, 50px, 600, $dark-xl);
+    text-transform: uppercase;
+  }
+  &__right_block{
+    max-width: 690px;
+    max-height: 690px;
+    position: relative;
+    z-index: 3;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__decoration_block{
+    height: 100%;
+    position: absolute;
+    width: 30.1667%;
+    background: $secondary-color;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .introduction{
+    .container{
+      padding: 63px 15px;
+      column-gap: 10px;
+    }
+    &__left_block{
+      row-gap: 15px;
+      &_description{
+        font-size: 6px;
+      }
+      &_text{
+        font-size: 7px;
+      }
+    }
+    &__title{
+      font-size: 13px;
+      line-height: 14.3px;
+    }
+    &__right_block{
+      max-width: 191px;
+      row-gap: 11px;
+      border-radius: 12px;
+      &_text{
+        font-size: 10px;
+      }
+    }
+  }
+}

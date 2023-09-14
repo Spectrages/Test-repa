@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.questions {
+  .container {
+    max-width: 1733px;
+    margin: auto;
+    margin-top: 31px;
+    margin-bottom: 76px;
+    padding: 0 15px;
+
+    @media (max-width: 780px) {
+      margin-top: 7px;
+      margin-bottom: 44px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 69px;
+
+    @media (max-width: 1735px) {
+      @include customFont(30px, 42.08px, 700, $dark-text-color);
+    }
+    @media (max-width: 1000px) {
+      @include customFont(25px, 37.1px, 700, $dark-text-color);
+    }
+    @media (max-width: 825px) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 780px) {
+      margin-bottom: 12px;
+      @include customFont(12px, 15.62px, 700, $dark-text-color);
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  .questions {
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .questions {
+    .container {
+      margin-top: 7px;
+      margin-bottom: 44px;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+  }
+}

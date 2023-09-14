@@ -1,0 +1,57 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.human_card_description {
+  margin-right: 5.32px;
+  margin-left: 14.53px;
+  display: flex;
+  justify-content: space-between;
+
+  &__name {
+    margin: 0;
+  }
+
+  &__years {
+    @include customFont(20px, 26.04px, 400, $dark-text-color);
+  }
+}
+
+@media (max-width: 1735px) {
+  .human_card_description {
+    align-items: center;
+    &__name {
+      @include customFont(20px, 29.06px, 500, $dark-text-color);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .human_card_description {
+    &__years {
+      @include customFont(15px, 21.04px, 400, $dark-text-color);
+    }
+    &__name {
+      @include customFont(15px, 22.08px, 500, $dark-text-color);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .human_card_description {
+    &__name {
+      @include customFont(10px, 15.08px, 500, $dark-text-color);
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .human_card_description {
+    margin-left: 3.3px;
+    &__years {
+      @include customFont(4.08px, 5.31px, 400, $dark-text-color);
+    }
+    &__name {
+      @include customFont(6px, 7.81px, 500, $dark-text-color);
+    }
+  }
+}

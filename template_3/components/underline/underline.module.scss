@@ -1,0 +1,10 @@
+.underline{
+  display: block;
+  width: calc(100% - 478px );
+  height: 1px;
+  margin: auto;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 50.52%, rgba(0, 0, 0, 0) 100%);
+  @media (max-width: 1000px) {
+    width: calc(100% - 104px);
+  }
+}

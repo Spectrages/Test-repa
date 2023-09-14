@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.reviews {
+  background: $secondary-color;
+  .container {
+    padding: 150px 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  &__title{
+    margin-bottom: 130px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .reviews {
+    .container {
+      padding: 35px 15px;
+    }
+    &__title{
+      margin-bottom: 25px;
+      font-size: 7px;
+    }
+  }
+}

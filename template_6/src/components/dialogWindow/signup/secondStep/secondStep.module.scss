@@ -1,0 +1,120 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+    :local .sign_up { 
+        &__field {
+            span {
+                right: 460px;
+            }
+        }
+    }
+}
+
+.sign_up {
+    &__previus_step{
+        position: absolute;
+        top: 55px;
+        left: 35px;
+        border: none;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    &__button {
+        margin: auto;
+        margin-top: 64px;
+        font-family: 'Tahoma';
+    }
+
+    form {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        row-gap: 20px;
+        max-width: 564px;
+        margin: 66px 0 0px;
+        position: relative;
+
+        input {
+            @include customFont(25px, 30px, 400, #525252);
+            padding: 25px 25px 25px;
+            min-width: 564px;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+            background: $light-xl;
+            border-radius: 18px;
+        
+            &::placeholder {
+              @include customFont(25px, 30px, 400, $placeholder-color);
+            }
+          }
+    }
+
+    &__field {
+        position: relative;
+
+        span {
+            top: 50%;
+            transform: translateY(-50%);
+            right: 37px;
+            position: absolute;
+            @include customFont(17px, 21px, 400, $error-color);
+            opacity: 0;
+        }
+
+        .error {
+            opacity: 1;
+            &+input {
+                color: $error-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sign_up {
+        &__previus_step{
+            top: 5px;
+            left: 15px;
+            img{
+                width: 8px; 
+            }
+        }
+        &__title {
+            font-size: 9px;
+        }
+
+        &__button {
+            margin-top: 18px;
+
+            &_text {
+              font-size: 7px;
+              cursor: pointer;
+            }
+        }
+
+        form {
+            row-gap: 3px;
+            max-width: 160px;
+            margin: 18px 0 0px;
+        
+            input {
+              @include customFont(7px, 9px, 400, #525252);
+              padding: 7px 7px 7px;
+              min-width: 160px;
+              border-radius: 5px;
+              &::placeholder {
+                @include customFont(7px, 9px, 400, $placeholder-color);
+              }
+            }
+          }
+
+        &__field {
+            span {
+                right: 10px;
+                @include customFont(5px, 6px, 400, $error-color);
+              }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.questions__item {
+  background: $primary-color;
+  padding: 35px 58px 35px 84px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: height 0.3s ease;
+}
+
+.questions__header {
+  display: flex;
+  justify-content: space-between;
+  @include customFont(40px, 40px, 500, $dark-text-color);
+}
+
+.questions__title_min_width {
+  max-width: 705px;
+}
+
+.questions__title_middle_width {
+  max-width: 794px;
+}
+
+.questions__title_max_width {
+  max-width: 823px;
+}
+
+.questions__content {
+  margin-top: 27px;
+  @include customFont(30px, 30px, 500, $dark-text-color);
+}
+
+.questions_item_expanded .questions_content {
+  height: auto;
+  opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .questions__item {
+    padding: 35px 38px 25px 54px;
+  }
+
+  .questions__header {
+    @include customFont(30px, 30px, 500, $dark-text-color);
+  }
+
+  .questions__content {
+    @include customFont(20px, 20px, 500, $dark-text-color);
+  }
+}
+
+@media (max-width: 780px) {
+  .questions__item {
+    border-radius: 4px;
+    padding: 6px 13px 6px 20px;
+  }
+
+  .questions__header {
+    @include customFont(8px, 8px, 500, $dark-text-color);
+  }
+
+  .questions__state {
+    @include customFont(16.3px, 11.41px, 500, $dark-text-color);
+  }
+
+  .questions__content {
+    @include customFont(6px, 6px, 400, $dark-text-color);
+    margin-top: 4px;
+  }
+}

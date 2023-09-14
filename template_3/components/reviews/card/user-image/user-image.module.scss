@@ -1,0 +1,55 @@
+.user_image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  margin: 38px 42px 0 42px;
+  &__left_card {
+    background: url('/images/first-avatar.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__center_card {
+    background: url('/images/second-avatar.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__right_card {
+    background: url('/images/third-avatar.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1880px) {
+  .user_image {
+    width: 90px;
+    height: 98px;
+    margin: 28px 32px 0 32px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .user_image {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .user_image {
+    margin: 20px 15px 0 22px;
+  }
+}
+
+@media (max-width: 780px) {
+  .user_image {
+    width: 22.59px;
+    height: 22.59px;
+    margin: 6.52px 6.41px 0 7px;
+  }
+}

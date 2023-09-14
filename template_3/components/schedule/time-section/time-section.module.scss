@@ -1,0 +1,88 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins.scss';
+
+.time_section {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  justify-content: space-between;
+  margin-bottom: 69px;
+
+  &__item {
+
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+      margin-bottom: 23px;
+
+      @media (max-width: 825px) {
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 780px) {
+        margin-bottom: 4.5px;
+      }
+    }
+  }
+
+  @media (max-width: 1120px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 780px) {
+    margin-bottom: 14.65px;
+  }
+
+  input {
+    display: none;
+
+    &:checked {
+      &+label {
+        background: $primary-color;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    width: 180px;
+    height: 64px;
+    cursor: pointer;
+
+    &_unvisible {
+      background: none;
+      cursor: default;
+
+      &:hover {
+        background: none;
+      }
+    }
+
+    @media (max-width: 1735px) {
+      width: 140px;
+    }
+
+    @media (max-width: 1120px) {
+      width: 100px;
+    }
+
+    @media (max-width: 825px) {
+      width: 60px;
+      height: 40px;
+    }
+
+    @media (max-width: 780px) {
+      width: 37px;
+      height: 13.05px;
+      border-radius: 6px;
+      box-sizing: border-box;
+      padding: 1px 2px;
+    }
+  }
+}
+
+.time_items_container {
+  display: grid;
+  grid-template-rows: repeat(3, 60px);
+  column-gap: 22px;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,29 @@
+.human_card_arrow {
+  display: block;
+  width: 21.23px;
+  height: 29.97px;
+  background: url(/icons/card-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  right: 6.24px;
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1000px) {
+  .human_card_arrow {
+    width: 15.23px;
+    height: 23.97px;
+  }
+}
+
+@media (max-width: 780px) {
+  .human_card_arrow {
+    width: 6.33px;
+    height: 6.11px;
+    right: 1.36px;
+  }
+}

@@ -1,0 +1,56 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.menu_button {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .menu_button {
+        position: fixed;
+        top: 4px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 22px;
+        height: 14px;
+        cursor: pointer;
+        z-index: 10;
+
+        &.closed {
+            position: absolute;
+        }
+        &.open{
+            position: fixed;
+            top: 14px;
+            right: 16px;
+        }
+        &.closed,
+        &.open{
+            width: 22px;
+            height: 14.13px;
+            cursor: pointer;
+
+            .line {
+                width: 100%;
+                height: 3px;
+                transition: transform 0.3s ease-in-out;
+                background: $dark-xl;
+                &:nth-of-type(1) {
+                    transform-origin: top left;
+                }
+
+                &:nth-of-type(2) {
+                    opacity: 1;
+                    transform-origin: center;
+                }
+
+                &:nth-of-type(3) {
+                    transform-origin: bottom left;
+                }
+            }
+        }
+    }
+}

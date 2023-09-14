@@ -1,0 +1,63 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .cleaning{
+    &__item{
+      &:nth-of-type(1),
+      &:nth-of-type(3) {
+        flex-direction: row-reverse;
+        
+      }
+      &:nth-of-type(2) {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+.cleaning{
+  background: $primary-color;
+  .container{
+    margin: 0 auto;
+    max-width: 1610px;
+    box-sizing: border-box;
+    padding: 150px 30px;
+  }
+  &__items_section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 90px;
+    max-width: 1025px;
+    margin: 0 auto;
+  }
+  &__item{
+    &:nth-of-type(2) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cleaning{
+    .container{
+      padding: 40px 30px;
+    }
+    &__items_section{
+      row-gap: 20px;
+    }
+    &__item{
+      flex-direction: row-reverse;
+    }
+  }
+  :global(:root[lang="he"]) {
+    :local .cleaning{
+      &__item{
+        &:nth-of-type(n){
+          flex-direction: row-reverse;
+          
+        }
+      }
+    }
+  }
+}

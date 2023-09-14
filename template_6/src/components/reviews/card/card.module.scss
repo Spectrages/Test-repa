@@ -1,0 +1,34 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 500px;
+  row-gap: 45px;
+  font-family: '__Montserrat_Fallback_f4d50f', '__Montserrat_Fallback_Fallback_f4d50f';
+  &__stars{
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    row-gap: 12px;
+    &__stars{
+      margin: 0 auto;
+    }
+    &__star{
+      width: 10px;
+      height: 10px;
+    }
+    &__user_comment{
+      font-size: 7px;
+    }
+    &__user_name{
+      font-size: 6px;
+    }
+  }
+}

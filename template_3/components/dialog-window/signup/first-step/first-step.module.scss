@@ -1,0 +1,169 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins.scss';
+
+
+.title {
+  margin: 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background: $primary-color;
+  transition: box-shadow .2s;
+  padding: 17px 89px;
+  margin: auto;
+  margin-top: 45px;
+
+  &_text {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &:hover {
+    box-shadow: 0px 6px 4px 0px #00000040;
+  }
+}
+
+.form {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 13px;
+  align-items: center;
+  justify-content: center;
+  max-width: 623px;
+  margin: 72px 0 0px;
+  position: relative;
+
+  input {
+    @include customFont(28px, 36.46px, 500, $dark-text-color);
+    border: 1px solid $dark-text-color;
+    border-radius: 26px;
+    padding: 18px 200px 18px 25px;
+    min-width: 623px;
+    box-sizing: border-box;
+
+    &::placeholder {
+      @include customFont(28px, 36.46px, 500, #00000080);
+    }
+  }
+}
+
+.field {
+  position: relative;
+
+  span {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    position: absolute;
+    z-index: 15;
+    @include customFont(25px, 32.55px, 400, #FF8A44);
+  }
+
+  .error {
+    &+input {
+      color: #FF8A44;
+    }
+  }
+
+  &:last-of-type {
+    span {
+      right: 90px;
+    }
+  }
+}
+
+
+@media (max-width: 1735px) {
+
+  .title {
+    @include customFont(30px, 42.08px, 700, $dark-text-color);
+  }
+
+  .button {
+    &_text {
+      @include customFont(20px, 29.06px, 500, $dark-text-color);
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .button {
+    &_text {
+      @include customFont(15px, 22.08px, 500, $dark-text-color);
+    }
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .title {
+    @include customFont(25px, 37.1px, 700, $dark-text-color);
+  }
+
+  .button {
+    &_text {
+      @include customFont(10px, 15.08px, 500, $dark-text-color);
+    }
+  }
+
+}
+
+@media (max-width: 915px) {
+  .form {
+    row-gap: 3px;
+    max-width: 172px;
+    margin: 19px 0 11px;
+
+    input {
+      @include customFont(7.78px, 10.13px, 500, $dark-text-color);
+      border: 0.28px solid $dark-text-color;
+      border-radius: 7px;
+      padding: 5px 60px 5px 6px;
+      min-width: 172px;
+
+      &::placeholder {
+        @include customFont(7.78px, 10.13px, 500, #00000080);
+      }
+    }
+  }
+
+  .button {
+    border-radius: 6px;
+    margin-top: 11px;
+    padding: 4px 24px;
+  }
+
+  .field {
+    span {
+      right: 6px;
+      @include customFont(6.95px, 9.05px, 400, #FF8A44);
+    }
+    &:last-of-type {
+      span {
+        right: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .title {
+    @include customFont(12px, 15.62px, 700, $dark-text-color);
+  }
+
+  .button {
+    &_text {
+      @include customFont(6px, 7.81px, 500, $dark-text-color);
+    }
+  }
+
+}

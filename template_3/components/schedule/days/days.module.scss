@@ -1,0 +1,66 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.days {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 103px;
+  margin-right: 88px;
+  margin-bottom: 0;
+  padding: 0;
+  &__item{
+    &_text{
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 1735px) {
+  .days {
+    margin-right: 65px;
+    &__item{
+      &_text{
+        @include customFont(25px, 35.57px, 500, $dark-text-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .days {
+    &__item{
+      &_text{
+        @include customFont(20px, 30.08px, 500, $dark-text-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .days {
+    margin-top: 60px;
+    &__item{
+      &_text{
+        @include customFont(15px, 35.08px, 500, $dark-text-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  .days {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 780px) {
+  .days {
+    margin-top: 21px;
+    margin-right: 25.73px;
+    &__item{
+      &_text{
+        @include customFont(7px, 9.11px, 500, $dark-text-color);
+      }
+    }
+  }
+}

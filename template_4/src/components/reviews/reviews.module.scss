@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.reviews {
+  .container {
+    max-width: 1733px;
+    margin: auto;
+    margin-top: 148px;
+    margin-bottom: 62px;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  &__description{
+    max-width: 1038px;
+    margin: 208px auto 0;
+  }
+}
+
+@media (max-width: 780px) {
+  .reviews {
+    .container {
+      margin-top: 60px;
+      margin-bottom: 0;
+    }
+    &__description{
+      max-width: 314px;
+      margin: 75px auto 0;
+      font-size: 12px;
+    }
+  }
+}

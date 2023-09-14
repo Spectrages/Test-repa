@@ -1,0 +1,176 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.button {
+  transition: 0.3s all;
+  cursor: pointer;
+  border: 2px solid $dark-xl;
+  background: transparent;
+  font-family: '__Akshar_086dc9', '__Akshar_Fallback_086dc9';
+  text-transform: uppercase;
+}
+
+.palettesPrimary {
+  color: $dark-xl;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 34px;
+  opacity: 1;
+  transition: all .2s;
+  box-sizing: border-box;
+  &:hover {
+    background-color: $secondary-color;
+  }
+
+  &:active {
+    background-color: $secondary-color;
+  }
+
+  &:disabled {
+    opacity: .6;
+      &:hover {
+        box-shadow: none;
+        cursor: default;
+      }
+  }
+}
+
+@media (max-width: 768px) {
+  .palettesPrimary {
+    font-size: 10px;
+    line-height: 11.28px;
+    border: 1px solid $dark-xl;
+  }
+}
+
+.palettesSecondary {
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25), 0px 1px 3px rgba(99, 99, 99, 0.15);
+
+  &:hover {
+    color: black;
+    background-color: #f5af0c;
+    box-shadow: 2px 1px 20px rgba(99, 93, 96, 0.4);
+  }
+
+  &:active {
+    color: black;
+    background-color: #F4AA00;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &:disabled {
+    color: #aeaeae;
+    background-color: #ffffff;
+    box-shadow: 2px 1px 4px rgba(1, 1, 1, 0.3);
+  }
+}
+
+.sizesFixed {
+  padding: 4px 30px;
+  @media (min-width: 768px) {
+    padding: 15px 100px;
+  }
+}
+
+.sizesFill {
+  width: 100%;
+}
+
+.fontStyleItalic {
+  font-style: italic;
+}
+
+.fontStyleNormal {
+  font-style: normal;
+}
+
+.fontWeightNormal {
+  font-weight: 400;
+}
+
+.fontWeightBold {
+  font-weight: 700;
+}
+
+.fontSize_xxs {
+  font-size: 8px;
+  line-height: 11px;
+}
+
+.fontSize_xs {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.fontSize_sm {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.fontSize_base {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.fontSize_lg {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.fontSize_xl {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.textColor_white {
+  color: #fff;
+}
+
+.textColor_black {
+  color: #000;
+}
+
+.textColor_gray_dark {
+  color: #333333;
+}
+
+.textColor_blue_dark {
+  color: #2e3940;
+}
+
+.textColor_green_dark {
+  color: #68d55d;
+}
+
+.textAlign_left {
+  text-align: left;
+}
+
+.textAlign_center {
+  text-align: center;
+}
+
+.textAlign_right {
+  text-align: right;
+}
+
+.textTransform_uppercase {
+  text-transform: uppercase;
+}
+
+.textTransform_lowercase {
+  text-transform: lowercase;
+}
+
+.textTransform_capitalize {
+  text-transform: capitalize;
+}
+
+.textTransform_normal {
+  text-transform: none;
+}

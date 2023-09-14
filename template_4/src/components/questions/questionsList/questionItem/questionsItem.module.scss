@@ -1,0 +1,36 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local  
+  .questions__item_title{
+    text-align: right;
+  }
+
+  .questions__content {
+    text-align: right;
+  }
+}
+
+.questions__item{
+  max-width: 450px;
+} 
+
+.questions__content {
+  margin-top: 52px;
+}
+
+@media (max-width: 768px) {
+  .questions__item{
+    max-width: 314px;
+  } 
+  
+  .questions__item_title{
+    font-size: 13px;
+  }
+
+  .questions__content {
+    margin-top: 20px;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,107 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .introduction {
+    &__main_section{
+      flex-direction: row-reverse;
+    }
+    &__right_block{
+      &_text{
+        text-align: right;
+      }
+    }
+  }
+}
+
+.introduction{
+  .container{
+    width: 100%;
+    background: url(../../../public/images/intro_image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &__main_section{
+    max-width: 1920px;
+    margin: auto;
+    padding: 347px 110px 292px;
+    box-sizing: border-box;
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-between;
+    align-content: flex-start;
+    grid-template-columns: repeat(2, auto);
+  }
+  &__left_block{
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    max-width: 450px;
+  }
+  &__title{
+    align-self: flex-start;
+    margin: 0;
+    @include customFont(50px, 56.4px, 700, $light-xl);
+    max-width: 450px;
+  }
+  &__right_block{
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 50px;
+    background: $light-xl;
+    max-width: 520px;
+    box-sizing: border-box;
+    padding: 75px 64px;
+    border-radius: 50px;
+  }
+  &__button{
+    margin: auto;
+  }
+  &__underline{
+    margin: 70px 65px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .introduction{
+    &__main_section{
+      padding: 347px 30px 292px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .introduction{
+    &__main_section{
+      padding: 146px 15px 15px;
+      grid-template-columns: repeat(1, auto);
+      justify-content: center;
+      position: relative;
+    }
+    &__left_block{
+      position: absolute;
+      bottom: -62px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__title{
+      margin: 0;
+      @include customFont(15px, 17px, 700, $primary-green);
+      max-width: 259px;
+      text-align: center;
+    }
+    &__right_block{
+      max-width: 191px;
+      row-gap: 11px;
+      padding: 18px 27px 13px;
+      border-radius: 12px;
+      &_text{
+        font-size: 10px;
+      }
+    }
+    &__underline{
+      margin: 78px 27px 0;
+    }
+  }
+}

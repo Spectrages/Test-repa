@@ -1,0 +1,150 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+    :local .login { 
+        &__field {
+            span {
+                right: 460px;
+            }
+        }
+        &__forgot_password {
+            margin-left: 0;
+            margin-right: 25px;
+        }
+    }
+}
+
+.login {
+    padding: 124px 120px 152px;
+    box-sizing: border-box;
+
+    &__button {
+        margin: auto;
+        font-family: 'Tahoma';
+    }
+
+    form {
+        margin: 66px 0 0;
+        display: grid;
+        justify-content: center;
+        row-gap: 20px;
+        input {
+            @include customFont(25px, 30px, 400, #525252);
+            padding: 25px 25px 25px;
+            min-width: 564px;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+            background: $light-xl;
+            border-radius: 18px;
+        
+            &::placeholder {
+              @include customFont(25px, 30px, 400, $placeholder-color);
+            }
+          }
+
+        .error {
+            opacity: 1;
+            &+input {
+                color: $error-color;
+            }
+        }
+    }
+
+    &__field {
+
+        position: relative;
+
+        span {
+            top: 50%;
+            transform: translateY(-50%);
+            right: 37px;
+            position: absolute;
+            @include customFont(17px, 21px, 400, $error-color);
+            opacity: 0;
+        }
+    }
+
+    &__forgot_password {
+        max-width: 290px;
+        margin: 33px 0 68px 25px;
+        text-align: left;
+        @include customFont(20px, 25px, 500, #525252);
+        cursor: pointer;
+        transition: opacity .2s;
+        background: none;
+        padding: 0;
+        border: none;
+        outline: none;
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+}
+
+
+@media (max-width: 900px) {
+    .login {
+        padding: 124px 75px 152px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login {
+        padding: 35px 35px 45px;
+
+        &__title {
+            font-size: 9px;
+        }
+
+        &__button {
+            &_text {
+                font-size: 7px;
+            }
+        }
+
+        form {
+            margin: 20px 0 0;
+            row-gap: 3px;
+            input {
+                @include customFont(7px, 9px, 400, #525252);
+                padding: 7px 7px 7px;
+                min-width: 160px;
+                border-radius: 5px;
+                &::placeholder {
+                  @include customFont(7px, 9px, 400, $placeholder-color);
+                }
+              }
+        }
+
+        &__field {
+
+            span {
+                right: 10px;
+                @include customFont(5px, 6px, 400, $error-color);
+            }
+        }
+
+        &__forgot_password {
+            max-width: 52px;
+            margin: 9px 0 19px 5px;
+            text-align: left;
+            @include customFont(6px, 7px, 500, $dark-xl);
+        }
+    }
+    :global(:root[lang="he"]) {
+        :local .login { 
+            &__field {
+                span {
+                    right: 125px;
+                }
+            }
+            &__forgot_password {
+                margin-left: 0;
+                margin-right: 5px;
+            }
+        }
+    }
+}

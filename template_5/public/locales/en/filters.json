@@ -1,0 +1,23 @@
+{
+    "allergy_title": "Allergy",
+    "allergy_1": "None",
+    "allergy_2": "Cat",
+    "allergy_3": "Dog",
+    "frequency_title": "Frequency",
+    "frequency_1": "One-time",
+    "frequency_2": "Twice a week",
+    "frequency_3": "Every week",
+    "cleaning_title": "Type of cleaning",
+    "cleaning_1": "Regular cleaning",
+    "cleaning_2": "Window cleaning",
+    "cleaning_3": "After relocation",
+    "cleaning_4": "After repairing",
+    "address_placeholder": "ADDRESS",
+    "mon": "Monday",
+    "tue": "Tuesday",
+    "wed": "Wednesday",
+    "thu": "Thursday",
+    "fri": "Friday",
+    "sat": "Saturday",
+    "sun": "Sunday"
+}

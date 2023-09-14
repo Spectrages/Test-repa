@@ -1,0 +1,50 @@
+@import '../../../styles/variables.scss';
+
+.underlines{
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1735px) {
+    justify-content: space-between;
+  }
+  @media (max-width: 825px) {
+    margin: 10px 0;
+  }
+  @media (max-width: 825px) {
+    margin: 5px 0;
+  }
+  padding-left: 0;
+  &__item{
+    display: block;
+    width: 150px;
+    height: 4px;
+    background: $dark-text-color;
+    @media (max-width: 1735px) {
+      width: 110px;
+    }
+    @media (max-width: 1120px) {
+      width: 90px;
+    }
+    @media (max-width: 825px) {
+      width: 60px;
+    }
+    @media (max-width: 780px) {
+      width: 30.6px;
+      height: 1px;
+    }
+    &:nth-of-type(7) {
+      margin-right: 20px;
+      @media (max-width: 1735px) {
+        margin-right: 20px;
+      }
+      @media (max-width: 1120px) {
+        margin-right: 10px;
+      }
+      @media (max-width: 825px) {
+        margin-right: 0;
+      }
+      @media (max-width: 780px) {
+        margin-right: 6px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .benefit_item{
+    &__title{
+      max-width: 183px;
+      text-align: right;
+    }
+    &__subtitle{
+      text-align: right;
+    };
+  }
+}
+
+.benefit_item{
+  background: transparent;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 210px;
+  &__title{
+    max-width: 285px;
+  }
+  &__subtitle{
+    font-family: '__Montserrat_Fallback_f4d50f', '__Montserrat_Fallback_Fallback_f4d50f';
+  };
+}
+
+@media (max-width: 768px) {
+  .benefit_item{
+    column-gap: 40px;
+    &__title{
+      font-size: 7px;
+      max-width: 60px;
+    }
+    &__subtitle{
+      font-size: 8px;
+    };
+  }
+}

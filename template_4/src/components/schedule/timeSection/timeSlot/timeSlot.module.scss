@@ -1,0 +1,31 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins.scss';
+
+.time_section {
+  &__label {
+    width: 100%;
+    height: 100%;
+    background: $primary-green;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: background .2s;
+    cursor: pointer;
+
+    &:hover {
+      background: #73B75280;
+      border: 3px solid $light-xl;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .time_section {
+    &__label {
+      border-radius: 3px;
+
+      &:hover {
+        border: 0.76px solid $light-xl;
+      }
+    }
+  }
+}

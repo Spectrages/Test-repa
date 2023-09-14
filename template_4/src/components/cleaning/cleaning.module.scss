@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.cleaning{
+
+  .container{
+    margin: auto;
+    max-width: 1610px;
+    box-sizing: border-box;
+    padding: 0 30px;
+  }
+  &__text_cards_section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 27px;
+  }
+  &__upper_underline{
+    display: none;
+  }
+  &__underline{
+    margin: 140px 65px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cleaning{
+    .container{
+      max-width: 338px;
+    }
+    &__text_cards_section{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 12px;
+    }
+    &__upper_underline{
+      display: none;
+    }
+    &__upper_underline{
+      display: block;
+      margin: 22px 27px 34px;
+    }
+    &__underline{
+      margin: 33px 27px 0px;
+    }
+  }
+}

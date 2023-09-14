@@ -1,0 +1,26 @@
+.offer_services{
+  position: relative;
+  z-index: 1;
+  background-image: url(../../../public/images/offer_services.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .container{
+    padding: 394px 30px;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .offer_services{
+    .container{
+      padding: 80px 15px;
+    }
+    &__title{
+      font-size: 8.39px;
+    }
+  }
+}

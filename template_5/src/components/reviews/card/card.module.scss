@@ -1,0 +1,68 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .card {
+    &__user_comment{
+      text-align: right;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 78px 40px;
+  max-width: 616px;
+  min-height: 560px;
+  background: $light-xl;
+  justify-content: space-between;
+  font-family: '__Fredoka_d35ece', '__Fredoka_Fallback_d35ece';
+  &__user_comment{
+    max-width: 505px;
+    line-height: 30px;
+  }
+  &__user_info{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &__user_description{
+    display: flex;
+    align-items: center;
+    column-gap: 28px;
+  }
+  &__user_image {
+    width: 119px;
+    height: 119px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 15px;
+    max-width: 212px;
+    min-height: 192px;
+    &__user_comment{
+      font-size: 8.97px;
+      line-height: 11px;
+    }
+    &__user_description{
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+    &__user_image {
+      width: 41px;
+      height: 41px;
+    }
+    &__user_name{
+      font-size: 10px;
+    }
+    &__date{
+      font-size: 7px;
+      line-height: 8px;
+    }
+  }
+}

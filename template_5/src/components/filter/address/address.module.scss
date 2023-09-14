@@ -1,0 +1,54 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.address {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  margin-top: 93px;
+
+  &__field {
+    min-width: 790px;
+    input {
+      border: 2px solid $dark-xl;
+      width: 100%;
+      @include customFont(20px, 23px, 400, $dark-xl);
+      text-transform: uppercase;
+      box-sizing: border-box;
+      padding: 14px 25px;
+      position: relative;
+
+      &::placeholder {
+        @include customFont(26px, 28.6px, 600, $placeholder-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .address {
+    &__field {
+      min-width: 550px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .address {
+    margin-top: 30px;
+    &__field {
+      min-width: 229px;
+      input {
+        border: 0.58px solid $dark-xl;
+        @include customFont(9px, 10px, 400, $dark-xl);
+        padding: 4px 8px;
+  
+        &::placeholder {
+          @include customFont(9px, 10px, 400, $placeholder-color);
+        }
+
+      }
+    }
+  }
+}

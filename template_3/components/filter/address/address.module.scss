@@ -1,0 +1,124 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.address {
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+  position: relative;
+
+  &__title {
+    padding-right: 86px;
+    padding-left: 86px;
+  }
+
+  &__line {
+    display: block;
+    width: calc(100% - 410.94px);
+    height: 1px;
+    right: 46px;
+    bottom: 21px;
+    position: absolute;
+    background: $placeholder-color;
+  }
+
+  &__field {
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 26px;
+    @include customFont(30px, 39.06px, 500, $dark-text-color);
+    padding: 20px 46px 13px 25px;
+    margin-left: 32px;
+    position: relative;
+    &::placeholder {
+      @include customFont(30px, 39.06px, 400, $placeholder-color);
+      @media (max-width: 780px) {
+        @include customFont(6.12px, 7.97px, 400, $placeholder-color);
+        padding: 3px 5px 3px 0px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1735px) {
+  .address {
+    &__line {
+      width: calc(100% - 370.94px);
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .address {
+    &__title {
+      padding-right: 46px;
+      padding-left: 46px;
+    }
+    &__line {
+      width: calc(100% - 290.94px);
+    }
+    &__field {
+      @include customFont(20px, 29.06px, 500, $dark-text-color);
+
+      &::placeholder {
+        @include customFont(20px, 29.06px, 400, $placeholder-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .address {
+    &__line {
+      width: calc(100% - 270.94px);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .address {
+    &__title {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    &__line {
+      width: calc(100% - 220.94px);
+      bottom: 12px;
+    }
+    &__field {
+      @include customFont(20px, 29.06px, 500, $dark-text-color);
+      padding: 5px 26px 3px 25px;
+      &::placeholder {
+        @include customFont(17px, 26.06px, 500, $placeholder-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .address {
+    margin-top: 14.25px;
+    &__title {
+      padding-right: 17.64px;
+      padding-left: 17.27px;
+    }
+    &__line {
+      width: calc(100% - 84.44px);
+      bottom: 5px;
+      right: 9.39px;
+      height: 0.4px;
+    }
+    &__field {
+      @include customFont(7px, 9.11px, 500, $dark-text-color);
+      padding: 3px 25px 3px 5px;
+      margin-left: 6.53px;
+      &::placeholder {
+        @include customFont(6.12px, 7.97px, 400, $placeholder-color);
+        padding: 3px 5px 3px 0px;
+        border-radius: 4px;
+      }
+    }
+  }
+}

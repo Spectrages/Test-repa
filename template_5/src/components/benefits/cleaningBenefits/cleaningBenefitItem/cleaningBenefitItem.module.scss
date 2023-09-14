@@ -1,0 +1,31 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .cleaning_benefit_item{
+    &__description{
+      text-align: right;
+    }
+  }
+}
+
+.cleaning_benefit_item{
+  max-width: 585px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .cleaning_benefit_item{
+    column-gap: 12px;
+    &__image{
+      max-width: 30px;
+    }
+    &__description{
+      font-size: 10px;
+      line-height: 12.1px;
+    }
+  }
+}

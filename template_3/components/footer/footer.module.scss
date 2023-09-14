@@ -1,0 +1,142 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.footer {
+  .container {
+    max-width: 1774px;
+    margin: auto;
+    margin-top: 72px;
+    margin-bottom: 33px;
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    margin-top: 111px;
+    position: relative;
+  }
+
+  .nav {
+    margin-top: 28px;
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      column-gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__item {
+      display: block;
+      width: 91.63px;
+      height: 88.76px;
+
+      &:nth-of-type(1) {
+        background: url('/icons/whatsapp.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &:nth-of-type(2) {
+        background: url('/icons/usual-phone.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &:nth-of-type(3) {
+        background: url('/icons/telegram.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    &__link_item {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__subtitle {
+    max-width: 267px;
+    margin: auto;
+    text-align: center;
+    margin-top: 81.24px;
+    @include customFont(20px, 20px, 400, $dark-text-color);
+  }
+
+  &__privacy {
+    margin-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 1735px) {
+  .footer {
+    &__title {
+      &_text {
+        @include customFont(30px, 42.08px, 700, $dark-text-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    &__title {
+      &_text {
+        @include customFont(25px, 37.1px, 700, $dark-text-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .footer {
+    .container {
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding: 0 15px;
+
+    }
+
+    &__title {
+      margin-top: 10px;
+
+      &_text {
+        @include customFont(12px, 15.62px, 700, $dark-text-color);
+      }
+    }
+
+    .nav {
+      margin-top: 14px;
+
+      &__list {
+        column-gap: 20px;
+      }
+
+      &__item {
+        width: 20px;
+        height: 20px;
+      }
+
+      &__link_item {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__subtitle {
+      display: none;
+    }
+
+    &__privacy {
+      display: none;
+    }
+  }
+}

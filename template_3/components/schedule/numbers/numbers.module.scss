@@ -1,0 +1,59 @@
+@import '../../../styles/variables.scss';
+@import '../../..//styles/mixins.scss';
+
+.numbers{
+  display: flex;
+  margin-top: 34px;
+  margin-bottom: 92px;
+  padding-left: 0;
+  justify-content: space-between;
+  @media (max-width: 1735px) {
+    justify-content: space-between;
+    margin-top: 0px;
+  }
+  @media (max-width: 1120px) {
+    margin-bottom: 30px;
+  }
+  @media (max-width: 825px) {
+    margin-bottom: 10px;
+  }
+  @media (max-width: 780px) {
+    margin-bottom: 22.02px;
+  }
+  &__item{
+    @include customFont(50px, 65.1px, 500, $dark-text-color);
+    @media (max-width: 1735px) {
+      @include customFont(25px, 35.57px, 500, $dark-text-color);
+    }
+    @media (max-width: 1000px) {
+      @include customFont(17px, 27.57px, 500, $dark-text-color);
+    }
+    @media (max-width: 780px) {
+      @include customFont(8px, 10.42px, 500, $dark-text-color);
+    }
+    &:nth-of-type(1) {
+      margin-left: 40px;
+      @media (max-width: 825px) {
+        margin-left: 20px;
+      }
+      @media (max-width: 780px) {
+        margin-left: 10px;
+      }
+    }
+    &:nth-of-type(7) {
+      margin-right: 80px;
+      @media (max-width: 1735px) {
+        margin-right: 70px;
+      }
+      @media (max-width: 1120px) {
+        margin-right: 50px;
+      }
+      @media (max-width: 825px) {
+        margin-right: 25px;
+      }
+      @media (max-width: 780px) {
+        margin-right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+:global(:root[lang="he"]) {
+  :local .card {
+    &:nth-of-type(1) {
+      order: 3;
+    }
+    &:nth-of-type(2) {
+      order: 2;
+    }
+    &:nth-of-type(3) {
+      order: 1;
+    }
+  }
+  .carousel{
+    &__left_arrow{
+      order: 3;
+    }
+    &__right_arrow{
+      order: 1;
+    }
+  }
+  .card_container{
+    order: 2;
+  }
+}
+
+.carousel{
+  position: relative;
+  margin-bottom: 88.15px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+  &__left_arrow{
+    transform: rotate(180deg);
+  }
+}
+
+.card_container{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 52px;
+  position: relative;
+}
+
+@media (max-width: 1250px) {
+  .carousel{
+    column-gap: 25px;
+  }
+  .card_container{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 25px;
+    position: relative;
+  }
+}
+
+@media (max-width: 780px) {
+  .carousel{
+    margin-bottom: 75px;
+    column-gap: 12px;
+  }
+  
+  .card_container{
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+    column-gap: 0px;
+  }
+}

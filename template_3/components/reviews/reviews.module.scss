@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.reviews {
+  .container {
+    max-width: 1733px;
+    margin: auto;
+    margin-top: 23px;
+    margin-bottom: 63px;
+
+    @media (max-width: 780px) {
+      margin-top: 9px;
+      margin-bottom: 9px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 69px;
+
+    @media (max-width: 780px) {
+      margin-bottom: 21px;
+    }
+  }
+}
+
+@media (max-width: 1735px) {
+  .reviews {
+    &__title {
+      @include customFont(30px, 42.08px, 700, $dark-text-color);
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .reviews {
+    &__title {
+      @include customFont(25px, 37.1px, 700, $dark-text-color);
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .reviews {
+    .container {
+      margin-top: 9px;
+      margin-bottom: 9px;
+    }
+
+    &__title {
+      margin-bottom: 21px;
+      @include customFont(12px, 15.62px, 700, $dark-text-color);
+    }
+  }
+}

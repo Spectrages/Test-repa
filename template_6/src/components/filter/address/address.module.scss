@@ -1,0 +1,147 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .address {
+    &__placeholder_pen{
+      right: 28px;
+    }
+  }
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  column-gap: 26px;
+  font-family: '__Montserrat_Fallback_f4d50f', '__Montserrat_Fallback_Fallback_f4d50f';
+
+  &__title{
+    margin: 110px 0 35px;  
+  }
+
+  &__input_container{
+    position: relative;
+    &::before{
+      content: '';
+      display: block;
+      width: 100%;
+      max-width: 714px;
+      height: 1px;
+      background: #9AADE5;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+   
+      z-index: 1;
+    }
+  }
+
+  &__placeholder_pen{
+    position: absolute;
+    left: 28px;
+    top: 25px;
+    z-index: 1;
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+    column-gap: 75px;
+    input {
+      min-width: 760px;
+      border: none;
+      outline: none;
+      width: 100%;
+      border-radius: 10px;
+      background: $button-dark-color;
+      @include customFont(25px, 30px, 500, $light-xl);
+      text-transform: uppercase;
+      box-sizing: border-box;
+      padding: 25px 26px;
+      position: relative;
+      box-sizing: border-box;
+      &:not(:placeholder-shown) {
+        + .address__placeholder_pen {
+          display: none;
+        }
+      }
+    }
+   
+  }
+}
+
+@media (max-width: 1100px) {
+  .address {
+    &__field {
+      input{
+        min-width: 250px;
+
+      }
+    }
+    &__input_container{
+      position: relative;
+      &::before{
+        width: 100%;
+        max-width: 370px;
+        height: 1px;
+        background: #9AADE5;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+     
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .address {
+    column-gap: 16px;
+  
+    &__title{
+      margin: 18px 0;  
+      font-size: 6px;
+    }
+  
+    &__input_container{
+      &::before{
+        height: 0.2px;
+        max-width: 148px;
+        right: 4px;
+        bottom: 4px;
+      }
+    }
+  
+    &__placeholder_pen{
+      width: 7px;
+      height: 7px;
+      left: 8px;
+      top: 9px;
+    }
+  
+    &__field {
+      column-gap: 16px;
+      input {
+        min-width: 154px;
+        border-radius: 2px;
+        @include customFont(6px, 7px, 500, $light-xl);
+        padding: 5px 6px;
+      }
+    }
+    .button{
+      &__text{
+        font-size: 6px;
+      }
+    }
+  }
+  :global(:root[lang="he"]) {
+    :local .address {
+      &__placeholder_pen{
+        right: 8px;
+      }
+    }
+  }
+}

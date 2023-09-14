@@ -1,0 +1,70 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .footer {
+    .nav {
+      &__list {
+        flex-direction: row-reverse;
+        justify-content: left;
+      }
+    }
+  }
+}
+
+.footer {
+  .container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 80px 30px;
+    justify-content: center;
+    row-gap: 90px;
+  }
+
+  &__title{
+    font-family: '__Montserrat_Fallback_f4d50f', '__Montserrat_Fallback_Fallback_f4d50f'
+  }
+
+  .nav {
+    margin: 0 auto;
+    &__list {
+      display: flex;
+      justify-content: center;
+      column-gap: 90px;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__link_item {
+      text-decoration: none;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    .container {
+      padding: 14px 30px;
+      row-gap: 16px;
+    }
+  
+    &__title{
+      font-size: 7px;
+    }
+  
+    .nav {
+      &__list {
+        column-gap: 18px;
+      }
+  
+      &__link_item {
+        &_text{
+          font-size: 8px;
+        }
+
+      }
+    }
+  }
+}

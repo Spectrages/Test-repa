@@ -1,0 +1,92 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins.scss';
+
+.swiper {
+  width: 100%;
+  height: 214px;
+}
+
+.swiperSlide {
+  text-align: center;
+  color: #a9a9a9;
+  font-size: 8px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.active {
+  @include customFont(23.53px, 30.64px, 400, $light-xl);
+  padding: 0 !important;
+}
+
+.neighbours {
+  @include customFont(20.59px, 26.81px, 400, #A9A9A9);
+  box-sizing: border-box
+}
+
+.prevNeighbours {
+  @include customFont(12px, 14px, 400, #A9A9A9);
+  background: linear-gradient(7.77deg, #b2b2b2 6.1%, rgba(178, 178, 178, 0) 122.06%);
+  background-size: 3px 3px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-sizing: border-box;
+}
+
+.paddingLeft {
+  padding-left: 30px;
+}
+
+.paddingLeftNeighbour {
+  padding-left: 15px;
+}
+
+.paddingRight {
+  padding-right: 30px;
+}
+
+.paddingRightNeighbour {
+  padding-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    height: 55px;
+  }
+  .active {
+    @include customFont(6.54px, 8.52px, 400, $light-xl);
+  }
+  .neighbours {
+    @include customFont(5.72px, 7.45px, 400, #A9A9A9);
+  }
+  .prevNeighbours {
+    @include customFont(3.72px, 5.45px, 400, #A9A9A9);
+  }
+  
+.paddingLeft {
+  padding-left: 4px;
+}
+
+.paddingLeftNeighbour {
+  padding-left: 2px;
+}
+
+.paddingRight {
+  padding-right: 4px;
+}
+
+.paddingRightNeighbour {
+  padding-right: 2px;
+}
+}

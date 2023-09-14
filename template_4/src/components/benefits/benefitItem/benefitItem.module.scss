@@ -1,0 +1,48 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .benefit_item{
+    &__title{
+      text-align: right;
+    }
+    &__subtitle{
+      text-align: right;
+    }
+  }
+}
+
+.benefit_item{
+  background: transparent;
+  max-width: 340px;
+  &__title{
+    margin: 0 0 35px 0;
+  }
+  &__subtitle{
+    max-width: 330px;
+    margin: auto;
+  }
+}
+
+.benefit_image{
+  margin-bottom: 70px;
+}
+
+@media (max-width: 768px) {
+  .benefit_item{
+    max-width: 138px;
+    &__title{
+      margin: 0 0 15px 0;
+      font-size: 12px;
+    }
+    &__subtitle{
+      font-size: 9px;
+    }
+  }
+  
+  .benefit_image{
+    margin-bottom: 30px;
+    max-width: 30px;
+    max-height: 30px;
+  }
+}

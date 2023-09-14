@@ -1,0 +1,170 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins.scss';
+
+.login{
+    text-align: center;
+    padding: 151px 101px 194px;
+    box-sizing: border-box;
+    &__title{
+        margin: 0;
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 20px;
+        background: $primary-color;
+        transition: box-shadow .2s;
+        padding: 17px 89px;
+        margin: auto;
+        &:hover{
+            box-shadow: 0px 6px 4px 0px #00000040;
+        }
+        &_text{
+            margin: 0;
+            cursor: pointer;
+        }
+    }
+    form{
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        align-items: center;
+        justify-content: center;
+        max-width: 623px;
+        margin: 72px 0 0;
+        input{
+            @include customFont(28px, 36.46px, 500, $dark-text-color);
+            border: 1px solid $dark-text-color;
+            border-radius: 26px;
+            padding: 18px 30px 18px 25px;
+            min-width: 623px;
+            box-sizing: border-box;
+            &::placeholder{
+                @include customFont(28px, 36.46px, 500, #00000080);
+            }
+        }
+        .error{
+            &+input{
+                color: #FF8A44;
+            }
+        }
+    }
+    &__field{
+        &:first-of-type{
+            margin-bottom: 13px;
+        }
+        position: relative;
+        span{
+            top: 50%;
+            transform: translateY(-50%);
+            right: 25px;
+            position: absolute;
+            @include customFont(25px, 32.55px, 400, #FF8A44);
+        }
+    }
+    &__forgot_password{
+        max-width: 190px;
+        margin: 33px 0 68px 25px;
+        text-align: left;
+        @include customFont(22px, 28.64px, 500, $dark-text-color);
+        cursor: pointer;
+        transition: color .2s;
+        background: none;
+        padding: 0;
+        border: none;
+        outline: none;
+        &:hover{
+            color: #00000080;
+        }
+    }
+}
+
+@media (max-width: 1735px) {
+    .login {
+        padding: 38px 28px 50px;
+        &__title{
+            @include customFont(30px, 42.08px, 700, $dark-text-color);
+        }
+        &__button {
+            &_text {
+                @include customFont(20px, 29.06px, 500, $dark-text-color);
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .login {
+        &__button {
+            &_text {
+                @include customFont(15px, 22.08px, 500, $dark-text-color);
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .login {
+        &__title{
+            @include customFont(25px, 37.1px, 700, $dark-text-color);
+        }
+        &__button {
+            &_text {
+                @include customFont(10px, 15.08px, 500, $dark-text-color);
+            }
+        }
+    }
+}
+
+@media (max-width: 915px) {
+    .login{
+        &__button{
+            border-radius: 6px;
+            padding: 4px 24px;
+        }
+        form{
+            max-width: 172px;
+            margin: 18px 0 0;
+            input{
+                @include customFont(7.78px, 10.13px, 500, $dark-text-color);
+                border: 0.28px solid $dark-text-color;
+                border-radius: 7px;
+                padding: 4px 8px 4px 7px;
+                min-width: 172px;
+                &::placeholder{
+                    @include customFont(7.78px, 10.13px, 500, #00000080);
+                }
+            }
+        }
+        &__field{
+            &:first-of-type{
+                margin-bottom: 3px;
+            }
+            position: relative;
+            span{
+                right: 6px;
+                @include customFont(6.95px, 9.05px, 400, #FF8A44);
+            }
+        }
+        &__forgot_password{
+            margin: 8px 0 8px 6px;
+            @include customFont(6.11px, 7.96px, 500, $dark-text-color);
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .login {
+        &__title{
+            @include customFont(12px, 15.62px, 700, $dark-text-color);
+        }
+        &__button {
+            &_text {
+                @include customFont(6px, 7.81px, 500, $dark-text-color);
+            }
+        }
+    }
+}

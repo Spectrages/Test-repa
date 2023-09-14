@@ -1,0 +1,42 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid $primary-green;
+  border-radius: 50px;
+  box-sizing: border-box;
+  padding: 24px 29px 30px;
+  max-width: 474px;
+  &__user_name{
+    margin-bottom: 20px;
+  }
+  &__user_image {
+    width: 108px;
+    height: 108px;
+    margin: 0 auto 29px;
+  }
+}
+
+@media (max-width: 780px) {
+  .card {
+    border: 1.84px solid $primary-green;
+    border-radius: 31px;
+    padding: 15px 19px;
+    max-width: 218px;
+    &__user_name{
+      margin-bottom: 12px;
+      font-size: 10px;
+    }
+    &__user_image {
+      margin-bottom: 17px;
+      width: 66px;
+      height: 66px;
+    }
+    &__user_comment{
+      font-size: 9px;
+      line-height: 10.15px;
+    }
+  }
+}

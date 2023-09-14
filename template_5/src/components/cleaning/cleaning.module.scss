@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.cleaning{
+  margin-bottom: 290px;
+  .container{
+    margin: auto;
+    max-width: 1610px;
+    box-sizing: border-box;
+    padding: 0 30px;
+  }
+  &__title{
+    margin-bottom: 160px;
+  }
+  &__text_cards_section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 27px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cleaning{
+    margin-bottom: 70px;
+    &__title{
+      margin-bottom: 50px;
+      font-size: 15px;
+    }
+    &__text_cards_section{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+    }
+  }
+}

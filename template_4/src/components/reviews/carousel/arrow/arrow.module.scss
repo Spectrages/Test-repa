@@ -1,0 +1,46 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.arrow {
+  width: 90px;
+  height: 44px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: $primary-green;
+  z-index: 2;
+  border-radius: 50px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s;
+  &:hover{
+    opacity: .6;
+  }
+  &:disabled{
+    opacity: .6;
+    cursor: default;
+  }
+}
+
+@media (max-width: 1250px) {
+  .arrow {
+    width: 60px;
+    height: 35px;
+    &__icon {
+      width: 20px;
+      height: 10px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+    .arrow {
+      width: 40px;
+      height: 25px;
+      &__icon {
+        width: 15px;
+        height: 10px;
+      }
+  }
+}

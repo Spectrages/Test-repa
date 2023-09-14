@@ -1,0 +1,62 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+:global(:root[lang="he"]) {
+  :local .days {
+    margin-right: 148px;
+    margin-left: 0;
+    &__item{
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.days {
+  max-width: 1135px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 148px;
+  margin-bottom: 0;
+  padding: 0;
+  column-gap: 10px;
+  &__item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .days {
+    &__item{
+      &_text{
+        font-size: 15px;
+      }
+      &_number{
+        font-size: 15px
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .days {
+    max-width: 285px;
+    margin-left: 20px;
+    column-gap: 3px;
+    &__item{
+      column-gap: 2px;
+      &_text,
+      &_number{
+        font-size: 7px;
+      }
+    }
+  }
+  :global(:root[lang="he"]) {
+    :local .days {
+      margin-right: 20px;
+    }
+  }
+}

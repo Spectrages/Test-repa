@@ -1,0 +1,114 @@
+@import '../../styles/variables';
+@import '../../styles/mixins.scss';
+
+.calendarWrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: $light-xl;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid $primary-color;
+  padding: 20px 0;
+  box-sizing: border-box;
+  width: 435px;
+  height: 420px;
+  color: #333333;
+  bottom: 63px;
+  right: 0px;
+  gap: 20px;
+  z-index: 100;
+
+  @media (max-width: 915px) {
+    right: -6.5%;
+  }
+}
+
+.caption {
+  position: relative;
+  @include customFont(20px, 26.81px, 400, $dark-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+    &:after {
+    width: 100%;
+    height: 1px;
+    background-color: $primary-color;
+    content: '';
+    position: absolute;
+    bottom: -15px;
+  }
+}
+
+.dateSelector {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 29px;
+    background-color: $primary-color;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+.pointer {
+  display: flex;
+  position: absolute;
+  bottom: -11px;
+  right: 38px;
+  z-index: 101;
+
+  @media (max-width: 768px) {
+    right: 8%;
+  }
+}
+
+.datePickerWrapper {
+  position: initial;
+  width: 200px;
+  background: #ffffff;
+  box-shadow: 0 13.0946px 39.2837px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  @media (max-width: 768px) {
+    width: 157px;
+  }
+}
+
+@media (max-width: 915px) {
+  .calendarWrapper {
+    box-shadow: 0px 4.087630271911621px 12.262889862060547px 0px #0000001A;
+    border: 0.28px solid $primary-color;
+    padding: 7px 0;
+    width: 120px;
+    height: 108px;
+    bottom: 16px;
+    right: 0px;
+    gap: 10px;
+  }
+  .caption {
+    @include customFont(5.72px, 7.45px, 400, $dark-text-color);
+      &:after {
+      height: 0.41px;
+      bottom: -7px;
+    }
+  }
+  .dateSelector {
+    margin-top: 7px;  
+    &:after {
+      height: 8px;
+    }
+  }
+  .pointer {
+    bottom: -3px;
+    right: 10px;
+    width: 7px;
+    height: 3px;
+  }
+}

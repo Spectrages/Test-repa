@@ -1,0 +1,38 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.share_app{
+  position: absolute;
+  right: 0;
+  top: 12px;
+  &__title{
+    @include customFont(30px, 30px, 500, $dark-text-color);
+  }
+  &__image_section{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    column-gap: 16px;
+    margin-top: 13px;
+  }
+  &__share_icon{
+    width: 66px;
+    height: 66px;
+    background: url('/images/share-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__qr_icon{
+    width: 160px;
+    height: 153px;
+    background: url('/images/qr-code.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+  }
+  @media (max-width: 1175px) {
+    display: none;
+  }
+}

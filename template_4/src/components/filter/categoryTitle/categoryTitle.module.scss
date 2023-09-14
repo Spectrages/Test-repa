@@ -1,0 +1,18 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.category_title {
+  box-sizing: border-box;
+}
+
+@media (max-width: 1124px) {
+  .category_title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .category_title {
+    font-size: 10px;
+  }
+}

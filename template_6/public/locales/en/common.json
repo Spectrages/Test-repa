@@ -1,0 +1,20 @@
+{
+    "app_title": "title",
+    "app_description": "Feel comfortable with my maid service",
+    "header": "Feel comfortable with my maid service",
+    "offer_services": "I offer you my cleaning services. I work as a maid and I am ready to make your apartment clean and comfortable.",
+    "benefits": "how am I different from others?",
+    "reviews": "reviews from other customers",
+    "filter": "Filter",
+    "filter_subtitle": "Select certain options to select the cleaning time",
+    "schedule": "Schedule",
+    "contacts": "Contacts to contact me",
+    "go_to_filter": "go to filter",
+    "order_btn": "ORDER",
+    "search_btn": "SEARCH",
+    "next_btn": "Next",
+    "done_btn": "Done",
+    "send_btn": "Send",
+    "Hebrew": "עִברִית",
+    "English": "English"
+}

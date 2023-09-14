@@ -1,0 +1,33 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.human_card_star {
+  width: 59px;
+  height: 55px;
+  background: url(/icons/colored-star.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include customFont(20px, 22px, 500, $light-xl);
+}
+
+@media (max-width: 1735px) {
+  .human_card_star {
+    width: 39px;
+    height: 35px;
+    margin-left: 10px;
+    @include customFont(15px, 17px, 500, $light-xl);
+  }
+}
+
+@media (max-width: 780px) {
+  .human_card_star {
+    width: 12.02px;
+    height: 11.22px;
+    margin-left: 0px;
+    @include customFont(4.08px, 4.49px, 500, $light-xl);
+  }
+}

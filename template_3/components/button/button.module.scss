@@ -1,0 +1,102 @@
+@import '../../styles/variables';
+@import '../../styles/mixins.scss';
+
+.button {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &__text {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__primary {
+    background: $primary-color;
+    box-shadow: none;
+    transition: box-shadow .2s;
+
+    &:hover {
+      box-shadow: 0px 6px 4px 0px #00000040;
+    }
+
+    &_usual_size {
+      padding: 16.5px 105px;
+      max-width: 341px;
+      margin: auto;
+      box-shadow: none;
+      transition: box-shadow .2s;
+
+      &:hover {
+        box-shadow: 0px 6px 4px 0px #00000040;
+      }
+
+      @media (max-width: 1000px) {
+        padding: 10.5px 50px;
+      }
+
+      @media (max-width: 780px) {
+        padding: 2px 27.5px;
+        border-radius: 4px;
+        box-shadow: none;
+      }
+    }
+
+    &:disabled {
+      background: $primary-color-disabled;
+      opacity: .6;
+      .button__text {
+        cursor: default;
+      }
+      &:hover {
+        box-shadow: none;
+        cursor: default;
+      }
+    }
+  }
+}
+
+@media (max-width: 1735px) {
+  .button {
+    &__text {
+      @include customFont(30px, 42.08px, 500, $dark-text-color);
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .button {
+    &__text {
+      @include customFont(20px, 32.08px, 500, $dark-text-color);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .button {
+    &__text {
+      @include customFont(15px, 27.08px, 500, $dark-text-color);
+    }
+    &__primary {
+      &_usual_size {
+        padding: 10.5px 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+
+  .button {
+    &__text {
+      @include customFont(8px, 10.42px, 500, $dark-text-color);
+    }
+    &__primary {
+      &_usual_size {
+        padding: 2px 27.5px;
+        border-radius: 4px;
+        box-shadow: none;
+      }
+    }
+  }
+}

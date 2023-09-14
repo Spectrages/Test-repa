@@ -1,0 +1,66 @@
+@import '../../styles/variables';
+@import '../../styles/mixins.scss';
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  background: #ffffff;
+  width: 100%;
+  height: 72px;
+  max-width: 350px;
+  box-shadow: 0px -6px 15px rgba(169, 169, 169, 0.15), 0px 6px 15px rgba(169, 169, 169, 0.15);
+  border-radius: 10px;
+  @include customFont(28px, 36.46px, 500, $dark-text-color);
+  display: flex;
+  align-items: center;
+  padding: 11px 17px;
+  pointer-events: none;
+}
+
+.input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.birth {
+  left: 16px;
+  color: #333333;
+}
+
+.calendar {
+  cursor: pointer;
+  z-index: 100;
+  background: none;
+  border: none;
+  outline: none;
+  right: 31px;
+}
+
+.position {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@media (max-width: 915px) {
+  .input {
+    height: 21px;
+    border-radius: 7px;
+    @include customFont(7.78px, 10.13px, 500, $dark-text-color);
+    padding: 5px 9px 5px 6px;
+  }
+
+  .calendar {
+    display: flex;
+    align-items: center;
+    right: 8px;
+    img {
+      width: 7px;
+      height: 7px;
+    }
+  }
+}
