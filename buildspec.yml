@@ -1,0 +1,22 @@
+version: 0.2
+
+env:
+  variables:
+    LANDING_PATH: "$CODEBUILD_SRC_DIR/$LANDING_NAME"
+
+phases:
+  pre_build:
+    commands:
+      - echo "Logging in to Amazon ECR..."
+      - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+  build:
+    commands:
+      - echo "Building the Docker image..."
+      - cd $LANDING_PATH
+      - docker build -t $LANDING_NAME .
+      - docker tag $LANDING_NAME:latest 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:latest
+  post_build:
+    commands:
+      - echo "Pushing the Docker image..."
+      - docker push 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:latest
+      - echo "Docker image pushed successfully!"
