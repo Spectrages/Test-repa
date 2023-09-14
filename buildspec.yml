@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    LANDING_PATH: "$CODEBUILD_SRC_DIR/$LANDING_NAME"
+    LANDING_PATH: "$CODEBUILD_SRC_DIR/template_6"
 
 phases:
   install:
