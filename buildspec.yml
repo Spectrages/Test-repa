@@ -7,7 +7,7 @@ env:
 phases:
   install:
     commands:
-      - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --storage-driver=overlay2 & 
+      - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --storage-driver=overlay2 &
       - sleep 30
       - docker info
   build:
@@ -16,7 +16,7 @@ phases:
       - ls -al $CODEBUILD_SRC_DIR
       - echo "Building the Docker image..."
       - cd template_6
-      - docker build -t 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:latest .
+      - docker build --build-arg NPM_TOKEN=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 -t 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:latest .
   post_build:
     commands:
       - echo "Logging in to Amazon ECR..."
