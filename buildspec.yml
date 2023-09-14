@@ -1,4 +1,4 @@
-version: 0.2
+version: 0.1
 
 env:
   variables:
@@ -9,8 +9,7 @@ phases:
     commands:
       - echo "Building the Docker image..."
       - cd $LANDING_PATH
-      - docker build -t $LANDING_NAME .
-      - docker tag $LANDING_NAME:latest 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:latest
+      - docker build -t 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:latest .
   post_build:
     commands:
       - echo "Pushing the Docker image..."
