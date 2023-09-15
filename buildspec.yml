@@ -8,15 +8,15 @@ phases:
       - docker info
   build:
     commands:
-      - echo "Listing the contents of CODEBUILD_SRC_DIR:"
-      - ls -al $CODEBUILD_SRC_DIR
+      - echo "Listing the contents of LANDING_NAME:"
+      - ls -al $LANDING_NAME
       - echo "Building the Docker image..."
       - cd $LANDING_NAME
-      - docker build --build-arg NPM_TOKEN=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 -t 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:latest .
+      - docker build --build-arg NPM_TOKEN=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 -t 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:$IMAGE_TAG .
   post_build:
     commands:
       - echo "Logging in to Amazon ECR..."
       - $(aws ecr get-login --region us-east-1 --no-include-email)
       - echo "Pushing the Docker image..."
-      - docker push 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:latest
+      - docker push 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:$IMAGE_TAG
       - echo "Docker image pushed successfully!"
