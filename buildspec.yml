@@ -8,8 +8,8 @@ phases:
       - docker info
   build:
     commands:
-      - echo "Building the Docker image with tag: $IMAGE_TAG"
-      - ls -al $LANDING_NAME
+      - echo "Building the Docker image with tag IMAGE_TAG"
+      - ls -al $IMAGE_TAG
       - echo "Building the Docker image..."
       - cd $LANDING_NAME
       - docker build --build-arg NPM_TOKEN=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 -t 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:$IMAGE_TAG .
