@@ -1,9 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    LANDING_PATH: "$CODEBUILD_SRC_DIR/template_6"
-
 phases:
   install:
     commands:
@@ -15,7 +11,7 @@ phases:
       - echo "Listing the contents of CODEBUILD_SRC_DIR:"
       - ls -al $CODEBUILD_SRC_DIR
       - echo "Building the Docker image..."
-      - cd template_6
+      - cd $LANDING_NAME
       - docker build --build-arg NPM_TOKEN=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 -t 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:latest .
   post_build:
     commands:
