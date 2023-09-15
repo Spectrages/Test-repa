@@ -1,4 +1,4 @@
-FROM node:18
+FROM public.ecr.aws/bitnami/node:18
 
 WORKDIR /usr/src/build
 
