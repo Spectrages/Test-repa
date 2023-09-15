@@ -8,7 +8,7 @@ phases:
       - docker info
   build:
     commands:
-      - echo "Listing the contents of LANDING_NAME:"
+      - echo "Building the Docker image with tag: $IMAGE_TAG"
       - ls -al $LANDING_NAME
       - echo "Building the Docker image..."
       - cd $LANDING_NAME
