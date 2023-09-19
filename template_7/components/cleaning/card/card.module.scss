@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    border: 5px solid #ACACAC;
+    background: #F3F3F3;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 18px;
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        background: #F4AA00;
+        box-shadow: 0px 5px 6px 0px #B98100;   
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        padding: 8px 86px 8px 86px;
+    }
+
+    .selectedButton {
+      display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        border: 1px solid #525252;
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset; 
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        padding: 8px 86px 8px 86px;
+    }
+}
+
+.selected {
+    transform: scale(1.2); /* Увеличиваем размер карточки */
+    z-index: 1; /* Поднимаем карточку над остальными элементами */
+  }
+  
+  .selected::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }

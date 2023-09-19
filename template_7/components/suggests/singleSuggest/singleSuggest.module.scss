@@ -1,0 +1,21 @@
+.singleSuggest {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    height: 285px;
+
+    .titleSuggest {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 120px;
+        gap: 10px;
+    }
+
+    .descriptionSuggest {
+        display: flex;
+        flex-direction: row;
+        padding-left: 219px;
+        width: 762px;
+    }
+}

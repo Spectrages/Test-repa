@@ -1,0 +1,132 @@
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 205px;
+    
+    .image {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+    }
+
+    .title {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 151px;
+    }
+
+    .filterContent {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin-top: 68px;
+        margin-left: 221px;
+        border-radius: 35px;
+        padding: 55px;
+        max-width: 1150px;
+        gap: 105px;
+
+        .columns {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 30px;
+
+            .column {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .singleColumn {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+    
+                   .checkbox {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+    
+                    .checkbox input[type="checkbox"] {
+                        appearance: none;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        border: 3px solid black;
+                        outline: none;
+                    }
+
+                    .checkbox input[type="checkbox"]:checked::after {
+                        content: "";
+                        display: block;
+                        width: 21px;
+                        height: 21px;
+                        border-radius: 50%;
+                        background: black;
+                        position: relative;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                      }
+                      
+    
+                    .checkbox label {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .addressBlock {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-left: 20px;
+            align-items: baseline;
+
+            .addressInput {
+                margin: 0;
+                padding: 0;
+                border: none;
+                background: none;
+                outline: none;
+                width: 615px;
+                height: 64px;
+                border-radius: 20px;
+                background: #F5F5DC;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;            
+                padding: 10px 10px 10px 28px;   
+            }
+        }
+    }
+    
+    .buttonBlock {
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+        margin-left: 35%;
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            width: 265px;
+            height: 80px;
+            text-align: center;
+            font-family: Roboto, sans-serif;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+            background: #F5F5DC;
+        }
+    } 
+}

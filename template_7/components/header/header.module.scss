@@ -1,0 +1,46 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background: url('../../public/assets/images/background.png');
+    z-index: 5;
+    padding: 230px 132px 207px;
+
+    .content{
+        display: flex;
+        position: relative;
+        max-width: 795px;
+        height: 100%;
+        // background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M1920 0H0V788.918L1919.73 1075.66L1919.09 1080H1920V0Z" fill="%23F4AA00"/></svg>');
+        
+    
+    .title {
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+            justify-content: center;
+            align-items: center;
+    
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                width: 400px;
+                height: 80px;
+                text-align: center;
+                font-family: Roboto, sans-serif;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: uppercase;
+                background: #F5F5DC;
+            }
+        }
+    }
+    
+}

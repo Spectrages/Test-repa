@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    border-radius: 50px;
+    background: #FFF;
+    max-width: 412px;
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        gap: 34px;
+    }
+
+    .description {
+        display: flex;
+        padding: 5px;
+    }
+}

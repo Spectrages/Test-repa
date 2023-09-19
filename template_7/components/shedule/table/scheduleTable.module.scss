@@ -1,0 +1,26 @@
+  .columnHeader {
+    padding-right: 63px;
+  }
+
+  .title {
+    margin-bottom: 67px;
+  }
+
+  .cell {
+    position: relative;
+    padding: 0;
+    height: 50px; /* Вы можете изменить это значение в зависимости от требуемой высоты ячейки */
+  }
+  
+  .cell::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%; /* Это свойство переместит линию на середину ячейки */
+    border-bottom: 1px solid black;
+  }
+
+  .hourCell {
+    padding-right: 32px;
+  }

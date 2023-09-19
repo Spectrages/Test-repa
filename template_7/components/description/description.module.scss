@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 76px;
+    gap: 163px;
+
+    .titleBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+        max-width: 676px;
+        margin-top: 165px;
+        margin-left: 149px;
+    }
+
+    .cardsBlock {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 35px;
+    }
+}

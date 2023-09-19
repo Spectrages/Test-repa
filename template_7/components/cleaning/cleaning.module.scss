@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 71px;
+    margin-top: 34px;
+    margin-bottom: 69px;
+
+    .title {
+        display: flex;
+        margin-bottom: 88px;
+        margin-left: 151px;
+    }
+
+    .checkboxesBlock {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px
+    }
+}
+
+.cardsBlock {
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .cardsBlock.animateOut {
+    transform: translateX(-100%);
+  }
+  
+  .animateIn {
+    transform: translateX(0);
+  }
+  
+  

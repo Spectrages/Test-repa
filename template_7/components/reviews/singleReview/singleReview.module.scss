@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between; /* Добавьте это свойство */
+    width: 780px;
+    min-height: 405px;
+    border-radius: 50px;
+    background: #F5F5DC;
+    padding: 42px;
+
+    .estimateBlock {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .titleImage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 22px;
+        }
+    }
+
+    .content {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
