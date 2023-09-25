@@ -14,7 +14,7 @@ phases:
   post_build:
     commands:
       - echo "Logging in to Amazon ECR..."
-      - $(aws ecr get-login --region us-east-1 --no-include-email)
+      - echo $(aws ecr get-login-password --region us-east-1) | docker login --username AWS --password-stdin 254492899594.dkr.ecr.us-east-1.amazonaws.com
       - echo "Pushing the Docker image..."
       - docker push 254492899594.dkr.ecr.us-east-1.amazonaws.com/ezrababait-landing:$IMAGE_TAG
       - echo "Docker image pushed successfully!"
